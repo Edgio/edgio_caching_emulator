@@ -1,0 +1,14 @@
+*~
+*.pyc
+*.png
+*.json
+*.out
+*.bin
+temp_logs/
+*.swp
+bin/
+obj/
+logs/
+out/
+*.eps
+*.pdf
