@@ -52,6 +52,10 @@ Simply hop into the directory and run make:
 
 ``` make ```
 
+The Makefile will use clang++ by default, but you can override the default with another compiler of your choice:
+
+``` CPP=g++ make ```
+
 ## Usage
 
 The ECE comes with a ready made set of cache admission (probabilistic,
@@ -61,7 +65,7 @@ made example script will perform an example using Second-Hit Caching and LRU:
 ``` ./run_em.sh <log directory> 2hc_lru ```
 
 Where `<log directory>` is a directory containing logs of the appropriate
-format.
+format.  Sample logs are provided in the directory `input_request_sequence`.
 
 Output will be placed in `out/<timestamp>`.
 
