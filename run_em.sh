@@ -16,7 +16,7 @@ function run_test()
     echo "Adding run of $executable to $RUNDIR/$BINNAME.dat"
     
     for i in $LIST_OF_TS; do
-        zcat $LOGDIR/*$i*.gz | sort -n
+        gunzip -c $LOGDIR/*$i*.gz | sort -n
     done | $executable > $RUNDIR/$BINNAME.dat
     
     echo "Finished $executable"

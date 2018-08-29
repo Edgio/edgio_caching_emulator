@@ -59,7 +59,7 @@ class Emulator{
 
         // This is the infinite cache with no evictions. Stored here in case we
         // Want to compare other protocols
-        std::tr1::unordered_map<std::string, bool> requested_item_map;
+        std::unordered_map<std::string, bool> requested_item_map;
         // Counters for infini cache
         unsigned long requested_item_map_hit;
         unsigned long requested_item_map_miss;

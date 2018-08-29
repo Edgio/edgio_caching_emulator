@@ -36,7 +36,7 @@ class SizeLRUEviction : public CacheEviction {
     private:
         const EmConfItems* sci;
 
-        std::tr1::unordered_map< std::string, SizeLRUEvictionEntry*>	_mapping;
+        std::unordered_map< std::string, SizeLRUEvictionEntry*>	_mapping;
         std::vector<unsigned int>			avg_oldest_requested_file_vector;
         unsigned long long				current_size;
         unsigned long long				total_capacity;
@@ -68,7 +68,7 @@ class SizeLRUEviction : public CacheEviction {
         unsigned int					number_of_bins_for_histogram;
         int 							lru_algo3_reg_purge;
         double 							m_w_origin_cost, w_size, w_age, w_item_attr_val;
-        std::tr1::unordered_map<std::string, s_item_attr> m_item_unordered_map;
+        std::unordered_map<std::string, s_item_attr> m_item_unordered_map;
 
         double							running_size_mu, running_size_var;
         double							alpha_running_size_mu, alpha_running_size_var;
@@ -76,8 +76,8 @@ class SizeLRUEviction : public CacheEviction {
 
         // Customer hit stats brought in here from emstructs and the old
         // reporting variables objects
-	    std::tr1::unordered_map<std::string,
-		std::tr1::unordered_map<std::string, unsigned long> > customer_hit_stats;
+	    std::unordered_map<std::string,
+		std::unordered_map<std::string, unsigned long> > customer_hit_stats;
 	    void compute_periodic_stats(bool floor_customer_loss);
 
 

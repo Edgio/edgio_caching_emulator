@@ -1,6 +1,6 @@
 # Compiler stff
 CPP?=clang++
-CPPFLAGS?=-g -Wall -Werror -D CBF
+CPPFLAGS?=-g -Wall -Werror -D CBF -std=c++11 -O2 
 
 # Source File stuff
 INCDIR=include

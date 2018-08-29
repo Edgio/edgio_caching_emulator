@@ -21,7 +21,7 @@
 #include <sstream>
 #include <string.h>
 #include <string>
-#include <tr1/unordered_map>
+#include <unordered_map>
 #include <vector>
 #include <unistd.h>
 
@@ -36,8 +36,8 @@ using namespace std;
  * 			hit_ratio 0.412903 byte_hit_ratio 0.250341
  */
 void ReportingVariables::dump_customer_stats() {
-	typedef std::tr1::unordered_map<string, unsigned long> inner_map;
-	typedef std::tr1::unordered_map<string, inner_map> outer_map;
+	typedef std::unordered_map<string, unsigned long> inner_map;
+	typedef std::unordered_map<string, inner_map> outer_map;
 
 	int total_customers = 0; float hit_ratio_sum = 0; float byte_hit_ratio_sum = 0;
 	customer_stats.clear();
@@ -74,8 +74,8 @@ void ReportingVariables::dump_customer_stats() {
 
 
 void ReportingVariables::reset_customer_stats() {
-	typedef std::tr1::unordered_map<string, unsigned long> inner_map;
-	typedef std::tr1::unordered_map<string, inner_map> outer_map;
+	typedef std::unordered_map<string, unsigned long> inner_map;
+	typedef std::unordered_map<string, inner_map> outer_map;
 
 	for (outer_map::iterator i = customer_hit_stats.begin(), iend = customer_hit_stats.end(); i != iend; ++i)
 	{
@@ -96,8 +96,8 @@ bool ReportingVariables::check_customer_in_list(string custid, vector<string> m_
 
 
 void ReportingVariables::print_and_reset_monitored_customer_stats(vector<string> m_monitor_customers_list) {
-	typedef std::tr1::unordered_map<string, unsigned long> inner_map;
-	typedef std::tr1::unordered_map<string, inner_map> outer_map;
+	typedef std::unordered_map<string, unsigned long> inner_map;
+	typedef std::unordered_map<string, inner_map> outer_map;
 
 	for (outer_map::iterator i = monitored_customers.begin(), iend = monitored_customers.end(); i != iend; ++i)
 	{
@@ -114,8 +114,8 @@ void ReportingVariables::print_and_reset_monitored_customer_stats(vector<string>
 }
 
 void ReportingVariables::compute_periodic_stats(bool floor_customer_loss) {
-	typedef std::tr1::unordered_map<string, unsigned long> inner_map;
-	typedef std::tr1::unordered_map<string, inner_map> outer_map;
+	typedef std::unordered_map<string, unsigned long> inner_map;
+	typedef std::unordered_map<string, inner_map> outer_map;
 
 	for (outer_map::iterator i = customer_hit_stats.begin(), iend = customer_hit_stats.end(); i != iend; ++i)
 	{

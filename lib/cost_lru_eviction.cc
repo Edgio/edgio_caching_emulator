@@ -11,7 +11,7 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include <tr1/unordered_map>
+#include <unordered_map>
 #include <math.h>
 #include <algorithm>
 #include <sstream>
@@ -512,7 +512,7 @@ void CostLRUEviction::decide_items_based_on_score() {
     compute_scores();
     unsigned long long _total_items_purged = 0;
     std::vector<std::pair<double, string> > score_vector; // pair = score, hash
-    for (std::tr1::unordered_map<string, s_item_attr>::iterator it = m_item_unordered_map.begin(); it != m_item_unordered_map.end(); ++it ) {
+    for (std::unordered_map<string, s_item_attr>::iterator it = m_item_unordered_map.begin(); it != m_item_unordered_map.end(); ++it ) {
         score_vector.push_back(std::make_pair(it->second.score, it->first));
     }
     std::sort(score_vector.begin(), score_vector.end()); // ascending order
@@ -809,8 +809,8 @@ string CostLRUEviction::return_customer_id(string url) {
 }
 
 void CostLRUEviction::compute_periodic_stats(bool floor_customer_loss) {
-	typedef std::tr1::unordered_map<string, unsigned long> inner_map;
-	typedef std::tr1::unordered_map<string, inner_map> outer_map;
+	typedef std::unordered_map<string, unsigned long> inner_map;
+	typedef std::unordered_map<string, inner_map> outer_map;
 
 	for (outer_map::iterator i = customer_hit_stats.begin(), iend = customer_hit_stats.end(); i != iend; ++i)
 	{

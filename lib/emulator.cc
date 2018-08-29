@@ -10,7 +10,6 @@
 #include <sstream>
 #include <fstream>
 #include <vector>
-#include <tr1/unordered_map>
 
 #include "status.h"
 #include "bloomfilter.h"

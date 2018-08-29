@@ -16,7 +16,7 @@ class FIFOAgeEviction : public CacheEviction {
     private:
         const EmConfItems* sci;
 
-        std::tr1::unordered_map< std::string, FIFOEvictionEntry*>	_mapping;
+        std::unordered_map< std::string, FIFOEvictionEntry*>	_mapping;
         std::vector<unsigned int>			avg_oldest_requested_file_vector;
         unsigned long long				current_size;
         unsigned long long				total_capacity;
