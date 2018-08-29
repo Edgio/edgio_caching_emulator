@@ -13,7 +13,6 @@
 #include <algorithm>
 #include <iostream>
 #include <vector>
-#include <tr1/unordered_map>
 #include <math.h>
 #include <algorithm>
 #include <sstream>

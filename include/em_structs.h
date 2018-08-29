@@ -19,16 +19,16 @@
 
 
 #include <vector>
-#include <tr1/unordered_map>
+#include <unordered_map>
 #include "status.h"
 
 class ReportingVariables{
     public:
 	    // for hit/byte-hit ratios
-	    std::tr1::unordered_map<std::string,
-		std::tr1::unordered_map<std::string, unsigned long> > customer_hit_stats;
-	    std::tr1::unordered_map<std::string,
-	    std::tr1::unordered_map<std::string, unsigned long> > monitored_customers;
+	    std::unordered_map<std::string,
+		std::unordered_map<std::string, unsigned long> > customer_hit_stats;
+	    std::unordered_map<std::string,
+	    std::unordered_map<std::string, unsigned long> > monitored_customers;
 	    unsigned long number_of_urls;
 	    unsigned int timer1, timer2, timer3, timer4, timer5;
 	    std::ostringstream customer_stats;

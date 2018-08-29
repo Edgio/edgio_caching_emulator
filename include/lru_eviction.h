@@ -36,7 +36,7 @@ class LRUEviction : public CacheEviction {
     private:
         const EmConfItems* sci;
 
-        std::tr1::unordered_map< std::string, LRUEvictionEntry*>	_mapping;
+        std::unordered_map< std::string, LRUEvictionEntry*>	_mapping;
         std::vector<unsigned int>			avg_oldest_requested_file_vector;
         unsigned long long				current_size;
         unsigned long long				total_capacity;
@@ -66,7 +66,7 @@ class LRUEviction : public CacheEviction {
         unsigned long long				egress_total_size;
         unsigned long					egress_total_count;
         unsigned int					number_of_bins_for_histogram;
-        std::tr1::unordered_map<std::string, item_attr> m_item_unordered_map;
+        std::unordered_map<std::string, item_attr> m_item_unordered_map;
 
         long							hour_count;
 
