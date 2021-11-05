@@ -1,5 +1,5 @@
 """ Parser for emulator output """
-# Copyright 2018, Oath Inc.
+# Copyright 2021 Edgecast Inc
 # Licensed under the terms of the Apache 2.0 open source license
 # See LICENSE file for terms.
 
