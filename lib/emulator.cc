@@ -1,4 +1,4 @@
-// Copyright 2021 Edgecast Inc
+// Copyright 2021 Edgio Inc
 // Licensed under the terms of the Apache 2.0 open source license
 // See LICENSE file for terms.
 
@@ -135,7 +135,7 @@ void modify_cachekey(string & cachekey, string access_log_entry) {
 
         // Rule 4
         // /EC_Cache/cache/http/80ACDC/ec1/dvrtest/smil::C7B67NATGUSTVNOW/media-u1let6dq9_b2383872_5152.ts:/c.ts
-        // /var/EdgeCast/edge/sailfish/www/80ACDC/ec1/dvrtest/smil:C7B67NATGUSTVNOW/media-u1let6dq9_b2383872_5152.ts
+        // /var/Edgio/edge/sailfish/www/80ACDC/ec1/dvrtest/smil:C7B67NATGUSTVNOW/media-u1let6dq9_b2383872_5152.ts
         for (std::vector<string>::const_iterator i = vecSpltStrings.begin();
                 i != vecSpltStrings.end(); ++i) {
             string str = *i;

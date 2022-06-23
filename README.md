@@ -1,10 +1,10 @@
-# Edgecast Caching Emulator
+# Edgio Caching Emulator
 A web-caching policy emulator.
 
 [![standard-readme
 compliant](https://img.shields.io/badge/readme%20style-standard-brightgreen.svg?style=flat-square)](https://github.com/RichardLitt/standard-readme)
 
-The Edgecast Caching Emulator (ECE) is a tool for comparing the impacts of
+The Edgio Caching Emulator (ECE) is a tool for comparing the impacts of
 arbitrary caching policies on cache performance for fixed workloads. In
 particular, it is intended to consume log data from production caching servers
 and provide insight into how the cache would behave, both in terms of
@@ -28,7 +28,7 @@ time consuming and risky. Furthermore, the system is log-driven, and is designed
 be driven by production traffic traces. Since it uses these production
 workloads, we dubbed this system an _emulator_, rather than a simulator.
 
-The Edgecast Caching Emulator includes the following features.
+The Edgio Caching Emulator includes the following features.
 * **Cache Admission**
  * **N-hit caching**: items are cached on the n-th request
  * **Probabilistic caching**: items are cached based on a pre-defined probability value
@@ -44,11 +44,11 @@ techniques over time, including hit and byte-hit ratios (overall and per custome
 
 To install the ECE, first clone the repo:
 
-```git clone https://github.com/EdgeCast/edgecast_caching_emulator.git ```
+```git clone https://github.com/edgioinc/edgio_caching_emulator.git ```
 
 Simply hop into the directory and run make:
 
-``` cd edgecast_caching_emulator ```
+``` cd edgio_caching_emulator ```
 
 ``` make ```
 
